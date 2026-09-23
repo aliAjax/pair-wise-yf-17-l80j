@@ -220,3 +220,409 @@ input {
     padding: 24px;
   }
 }
+
+/* ===== 风箱压力复测 ===== */
+.wp-panel {
+  margin-top: 18px;
+}
+
+.wp-rule {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--accent) 8%, #ffffff);
+  color: #44515f;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.wp-venues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.wp-venue {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  border-color: color-mix(in srgb, var(--secondary) 30%, var(--border));
+}
+
+.wp-venue-active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.wp-venue-count {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, #b91c1c 14%, #ffffff);
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.wp-venue-active .wp-venue-count {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.wp-summary {
+  margin: 14px 0 18px;
+  color: #526071;
+  font-size: 14px;
+}
+
+.wp-summary-bad {
+  color: #b91c1c;
+}
+
+.wp-summary-ok {
+  color: #15803d;
+}
+
+.wp-stops {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.wp-stop {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbfdff;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.wp-stop:hover {
+  border-color: color-mix(in srgb, var(--primary) 45%, var(--border));
+}
+
+.wp-stop-active {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 25%, transparent);
+}
+
+.wp-stop-pending {
+  border-color: color-mix(in srgb, #b91c1c 45%, var(--border));
+  background: color-mix(in srgb, #b91c1c 4%, #fbfdff);
+}
+
+.wp-stop-pending.wp-stop-active {
+  box-shadow: 0 0 0 2px color-mix(in srgb, #b91c1c 25%, transparent);
+}
+
+.wp-stop-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.wp-stop-head h3 {
+  margin: 0;
+}
+
+.wp-badge {
+  flex: none;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.wp-badge-normal {
+  color: #15803d;
+  background: color-mix(in srgb, #15803d 12%, #ffffff);
+}
+
+.wp-badge-pending {
+  color: #b91c1c;
+  background: color-mix(in srgb, #b91c1c 12%, #ffffff);
+}
+
+.wp-badge-maint {
+  color: var(--secondary);
+  background: color-mix(in srgb, var(--secondary) 12%, #ffffff);
+}
+
+.wp-conclusion {
+  margin: 0;
+  font-size: 13px;
+  color: #526071;
+  line-height: 1.6;
+}
+
+.wp-lock {
+  margin-right: 4px;
+}
+
+.wp-stop-metrics,
+.wp-timeline-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wp-tag {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 12px;
+  padding: 4px 9px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: #526071;
+}
+
+.wp-tag b {
+  font-size: 13px;
+}
+
+.wp-tag em {
+  font-style: normal;
+  opacity: 0.75;
+}
+
+.wp-tag-ok b {
+  color: #15803d;
+}
+
+.wp-tag-bad {
+  border-color: color-mix(in srgb, #b91c1c 40%, var(--border));
+  background: color-mix(in srgb, #b91c1c 7%, #ffffff);
+}
+
+.wp-tag-bad b {
+  color: #b91c1c;
+}
+
+.wp-empty {
+  color: #94a3b8;
+  font-size: 13px;
+  margin: 0;
+}
+
+.wp-stop-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.wp-stop-actions button {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.wp-retest-locked {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.wp-editor {
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid color-mix(in srgb, var(--primary) 35%, var(--border));
+  border-radius: 8px;
+  background: #fcfaf7;
+}
+
+.wp-editor-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.wp-editor-head h3 {
+  margin: 0;
+}
+
+.wp-form-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.wp-rows {
+  display: grid;
+  gap: 10px;
+}
+
+.wp-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr auto;
+  gap: 10px;
+  align-items: end;
+  position: relative;
+  padding: 12px;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.wp-row label {
+  min-width: 0;
+}
+
+.wp-row-remove {
+  min-width: 42px;
+  height: 42px;
+  color: #b91c1c;
+}
+
+.wp-row-error {
+  position: absolute;
+  left: 12px;
+  bottom: -8px;
+  font-size: 12px;
+  color: #b91c1c;
+  background: #fff5f5;
+  padding: 0 6px;
+}
+
+.wp-editor-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.wp-preview {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.wp-preview-ok {
+  color: #15803d;
+  font-weight: 700;
+}
+
+.wp-preview-bad {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.wp-preview-count {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.wp-note-field {
+  margin-bottom: 14px;
+}
+
+.wp-submit {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.wp-submit .primary {
+  min-width: 140px;
+}
+
+.wp-reasons {
+  margin: 8px 0 0;
+  color: #b91c1c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.wp-note {
+  margin: 6px 0 0;
+  color: #526071;
+  font-size: 13px;
+}
+
+.wp-history {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.wp-history h3 {
+  margin-bottom: 12px;
+}
+
+.wp-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.wp-timeline-item {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+.wp-timeline-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.wp-technician {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.wp-point-list {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: #44515f;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.wp-point-list em {
+  color: #94a3b8;
+  font-style: normal;
+}
+
+.wp-reset {
+  padding: 0 14px;
+}
+
+@media (max-width: 860px) {
+  .wp-stops {
+    grid-template-columns: 1fr;
+  }
+
+  .wp-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wp-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wp-row-point {
+    grid-column: 1 / -1;
+  }
+
+  .wp-row-remove {
+    grid-column: 1 / -1;
+  }
+}

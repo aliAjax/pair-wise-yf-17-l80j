@@ -1,4 +1,5 @@
 import "./styles.css";
+import { WindPressurePanel } from "./windPressure/WindPressurePanel";
 
 const project = {
   "sourceNo": 7,
@@ -121,6 +122,8 @@ function App() {
           ))}
         </div>
       </section>
+
+      <WindPressurePanel />
     </main>
   );
 }
