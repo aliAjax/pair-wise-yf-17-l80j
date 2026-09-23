@@ -208,15 +208,366 @@ input {
   line-height: 1.6;
 }
 
+/* ===== 风箱压力复测 ===== */
+
+.wind-panel {
+  margin-top: 18px;
+}
+
+.wind-rule {
+  color: #64748b;
+  font-size: 13px;
+  text-align: right;
+}
+
+.wind-venues {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.wind-venue-on {
+  border-color: var(--primary) !important;
+  background: color-mix(in srgb, var(--primary) 20%, #ffffff) !important;
+  font-weight: 700;
+}
+
+.wind-add-venue {
+  display: flex;
+  gap: 8px;
+}
+
+.wind-add-venue input {
+  width: 180px;
+  min-height: 38px;
+}
+
+.wind-add-venue button {
+  padding: 0 12px;
+}
+
+.wind-stat {
+  margin: 0 0 16px;
+  color: #526071;
+  font-size: 13px;
+}
+
+.wind-banner {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, #ffffff);
+  color: #075985;
+  line-height: 1.6;
+}
+
+.wind-banner-warn {
+  border-color: color-mix(in srgb, #b91c1c 36%, var(--border));
+  background: color-mix(in srgb, #ef4444 10%, #ffffff);
+  color: #991b1b;
+}
+
+.wind-stops {
+  display: grid;
+  gap: 14px;
+}
+
+.wind-stop {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+.wind-stop-locked {
+  border-color: color-mix(in srgb, #ef4444 55%, var(--border));
+  background: color-mix(in srgb, #ef4444 5%, #fbfdff);
+}
+
+.wind-stop-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.wind-stop-head h3 {
+  margin: 0;
+}
+
+.wind-badge {
+  flex: none;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.wind-badge-normal {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.wind-badge-pending {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.wind-conclusion {
+  margin: 0 0 12px;
+  color: #526071;
+  line-height: 1.6;
+}
+
+.wind-conclusion span {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 1px 8px;
+  border-radius: 5px;
+  background: color-mix(in srgb, var(--primary) 12%, #ffffff);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.wind-stop-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.wind-stop-actions button {
+  padding: 0 14px;
+}
+
+.wind-entries {
+  display: grid;
+  gap: 10px;
+}
+
+.wind-entry {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.wind-entry-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.wind-entry-kind {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.wind-entry-head time {
+  color: #64748b;
+}
+
+.wind-entry-pressures {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: #334155;
+}
+
+.wind-metric {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #166534;
+}
+
+.wind-metric-bad {
+  color: #b91c1c;
+}
+
+.wind-points,
+.wind-reasons {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: #526071;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.wind-reasons {
+  color: #991b1b;
+}
+
+.wind-restored {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #166534;
+  font-weight: 600;
+}
+
+.wind-note {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #526071;
+}
+
+.wind-new-stop {
+  border-style: dashed;
+  padding: 10px;
+}
+
+.wind-empty {
+  margin: 0;
+  color: #64748b;
+}
+
+/* 登记/复测表单 */
+
+.wind-form {
+  margin-bottom: 16px;
+  padding: 18px;
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, var(--border));
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.wind-form-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.wind-form-head h3 {
+  margin: 0;
+}
+
+.wind-form-head button {
+  width: 34px;
+  min-height: 34px;
+  padding: 0;
+  font-size: 18px;
+}
+
+.wind-form-venue {
+  margin: 8px 0 0;
+  color: #526071;
+  font-size: 13px;
+}
+
+.wind-form-hint {
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: color-mix(in srgb, #f59e0b 12%, #ffffff);
+  color: #92400e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.wind-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.wind-form-full {
+  margin-top: 12px;
+}
+
+.wind-point-table {
+  margin-top: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.wind-point-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.2fr 0.8fr;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+}
+
+.wind-point-row + .wind-point-row {
+  border-top: 1px solid var(--border);
+}
+
+.wind-point-header {
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.wind-point-row input {
+  min-height: 38px;
+}
+
+.wind-drop-cell {
+  font-size: 13px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.wind-point-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.wind-point-actions button {
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.wind-preview {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--accent) 10%, #ffffff);
+  color: #075985;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.wind-preview-bad {
+  background: color-mix(in srgb, #ef4444 10%, #ffffff);
+  color: #991b1b;
+}
+
+.wind-error {
+  margin: 10px 0 0;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+.wind-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
+
 @media (max-width: 860px) {
-  .metrics,
-  .workspace,
-  .field-grid {
-    grid-template-columns: 1fr;
+  .wind-point-row {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .hero {
-    min-height: 210px;
-    padding: 24px;
+  .wind-point-header {
+    display: none;
+  }
+
+  .wind-form-grid,
+  .wind-venues {
+    grid-template-columns: 1fr;
   }
 }
+
